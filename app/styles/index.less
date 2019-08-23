@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'myriad-pro', sans-serif;
+  line-height: 1;
+}
+
+.background {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/space.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.banner {
+  position: fixed;
+  bottom: -100%;
+  width: 100%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translateX(-50%);
+  max-width: 1024px;
+  min-width: 280px;
+  height: 90px;
+  animation-name: banner;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .all-backgrounds {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      animation-name: change-background;
+      animation-duration: 9s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      background-image: url(../images/background.png), url(../images/girl-2.png), url(../images/girl-1024.png);
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-position: center 0, center -90px, center -90px;
+      background-size: cover;
+    }
+
+    .content {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 57px;
+
+      .logo {
+        border: 2px solid #ffffff;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        width: 156px;
+
+        p {
+          font-size: 18px;
+          display: inline-block;
+          margin: 0;
+          color: white;
+        }
+      }
+
+      .center-block {
+        display: flex;
+        align-items: center;
+
+        .august {
+          width: 106px;
+          height: 58px;
+          background: url(../images/august.png) no-repeat center center;
+          background-size: cover;
+          opacity: 0.4;
+          margin-right: 20px;
+        }
+
+        .text {
+          font-size: 30px;
+          color: white;
+          font-weight: bold;
+
+          span {
+            font-size: 40px;
+            color: white;
+          }
+
+          .for-you {
+            color: #b5b5b5;
+            font-weight: 100;
+          }
+        }
+      }
+
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        height: 100%;
+        justify-content: flex-end;
+
+        .gulliver {
+          background-image: url(../images/Gulliver.png);
+          width: 68px;
+          height: 16px;
+          opacity: 0.6;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        .kyiv {
+          background-image: url(../images/Kyiv.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 29px;
+          height: 11px;
+          opacity: 0.4;
+        }
+      }
+
+      .btn {
+        box-shadow: 0px 3px 0px 0px #364f00;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a6bd76), color-stop(1, #5a8400));
+        background: -moz-linear-gradient(top, #a6bd76 5%, #5a8400 100%);
+        background: -webkit-linear-gradient(top, #a6bd76 5%, #5a8400 100%);
+        background: -o-linear-gradient(top, #a6bd76 5%, #5a8400 100%);
+        background: -ms-linear-gradient(top, #a6bd76 5%, #5a8400 100%);
+        background: linear-gradient(to bottom, #a6bd76 5%, #5a8400 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6bd76', endColorstr='#5a8400',GradientType=0);
+        background-color: #a6bd76;
+        border-radius: 9px;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: bold;
+        padding: 13px 23px;
+        text-decoration: none;
+        text-shadow: 0 1px 0 #426100;
+        animation: scale-btn 9s infinite ease-in-out;
+
+
+        &:hover {
+          background: linear-gradient(to bottom, #5a8400 5%, #a6bd76 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5a8400', endColorstr='#a6bd76',GradientType=0);
+          background-color: #5a8400;
+        }
+
+        &:active {
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes banner {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes change-background {
+  0%, 5% {
+    filter: brightness(1);
+  }
+  5%, 10% {
+    filter: brightness(0.2);
+  }
+  10%, 15% {
+    filter: brightness(1);
+  }
+  15%, 50% {
+    background-position: 0 90px, center 0, center -90px;
+  }
+  60%, 90% {
+    background-position: 0 90px, center 90px, center 0;
+  }
+  91% {
+    background-position: center 0, center -90px, center -90px;
+  }
+}
+
+@keyframes scale-btn {
+  0%, 25% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.7);
+  }
+  35% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.7);
+  }
+  45%, 60% {
+    transform: scale(1);
+  }
+  65% {
+    transform: scale(0.7);
+  }
+  70% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.7);
+  }
+  80% {
+    transform: scale(1);
+  }
+  85% {
+    transform: scale(0.7);
+  }
+  90% {
+    transform: scale(1);
+  }
+}

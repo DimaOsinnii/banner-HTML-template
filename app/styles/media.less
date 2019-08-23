@@ -1,0 +1,301 @@
+@media (max-width: 639px) and (min-width: 280px) {
+  .banner {
+    .container {
+      .all-backgrounds {
+        background-position: 0 90px, -100px 0, center -90px;
+        animation: change-background-2 6s ease-in-out infinite;
+      }
+
+      .content {
+        padding: 10px 14px;
+        position: relative;
+
+        .logo {
+          padding: 6px 6px;
+          animation: delete-logo 6s ease-in-out infinite;
+        }
+
+        .center-block {
+          position: absolute;
+          left: 14px;
+          display: flex;
+          align-items: flex-end;
+          opacity: 0;
+          animation: center-appear 6s ease-in-out infinite;
+
+          .august {
+            position: relative;
+            width: 54px;
+            height: 29px;
+            bottom: 2px;
+            opacity: 0;
+            margin-right: 0;
+            transform: translateX(-10%);
+            animation: move-august 6s ease-in-out infinite;
+          }
+
+          .text {
+            position: relative;
+            font-size: 14px;
+
+            span {
+              font-size: 30px;
+            }
+
+            .for-you {
+              font-size: 19px;
+            }
+          }
+        }
+
+        .text-container {
+          position: absolute;
+          top: 18px;
+          right: 16px;
+          opacity: 0;
+          animation: right-appear 6s infinite ease-in-out;
+          justify-content: flex-start;
+
+          .gulliver {
+            width: 40px;
+            height: 9px;
+          }
+
+          .kyiv {
+            width: 17px;
+            height: 6px;
+          }
+        }
+
+        .btn {
+          margin-top: 20px;
+          font-size: 10px;
+          opacity: 0;
+          padding: 8px 14px;
+          animation: scale-btn-2 6s infinite ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) and (min-width: 640px) {
+  .banner {
+    .container {
+      .all-backgrounds {
+        background-position: -100px 0;
+        animation: change-background-3 8s ease-in-out infinite;
+      }
+
+      .content {
+        padding: 8px 28px;
+
+        .logo {
+          width: 130px;
+          height: 34px;
+
+          p {
+            font-size: 14px;
+          }
+        }
+
+        .center-block {
+          .august {
+            width: 86px;
+            height: 47px;
+            background-size: cover;
+            margin-right: 0;
+            animation: move-august-2 8s ease-in-out infinite;
+          }
+
+          .text {
+            font-size: 25.5px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            span {
+              line-height: 0.9;
+              font-size: 32px;
+            }
+
+            .for-you {
+              line-height: 0.9;
+            }
+          }
+        }
+
+        .text-container {
+          .gulliver {
+            width: 48px;
+            height: 11px;
+          }
+
+          .kyiv {
+            width: 20px;
+            height: 8px;
+          }
+        }
+
+        .btn {
+          padding: 8px 7px;
+          width: 96px;
+          height: 31px;
+          font-size: 14px;
+          text-align: center;
+          animation: scale-btn-3 8s ease-in-out infinite;
+        }
+      }
+    }
+  }
+}
+
+@keyframes delete-logo {
+  0% {
+    opacity: 1;
+  }
+  35%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes move-august {
+  0%, 40% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  45%, 100% {
+    opacity: 0.4;
+    transform: translateX(-10%);
+  }
+}
+
+@keyframes move-august-2 {
+  0%, 12% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  12.5%, 100% {
+    opacity: 0.4;
+    transform: translateX(-10%);
+  }
+}
+
+@keyframes center-appear {
+  0%, 32% {
+    opacity: 0;
+  }
+  33%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes change-background-2 {
+  0%, 50% {
+    background-image: url(../images/girl-2.png);
+    background-repeat: no-repeat;
+    background-position: -100px 0;
+  }
+  51%, 100% {
+    background-image: url(../images/mini-girl.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@keyframes right-appear {
+  0%, 50% {
+    opacity: 0;
+  }
+  51%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-btn-2 {
+  0%, 50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.7);
+  }
+  80% {
+    transform: scale(1);
+  }
+  85% {
+    transform: scale(0.7);
+  }
+  90% {
+    transform: scale(1);
+  }
+  95% {
+    transform: scale(0.7);
+  }
+  99% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+
+@keyframes change-background-3 {
+  0%,61% {
+    background-image: url(../images/girl-2.png);
+    background-repeat: no-repeat;
+    background-position: -100px 0;
+  }
+  62%,100% {
+    background-image: url(../images/mini-girl.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+}
+
+@keyframes scale-btn-3{
+  0%,20% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.7);
+  }
+  30% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(0.7);
+  }
+  40% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(0.7);
+  }
+  50%,70% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.7);
+  }
+  80% {
+    transform: scale(1);
+  }
+  85% {
+    transform: scale(0.7);
+  }
+  90% {
+    transform: scale(1);
+  }
+  95% {
+    transform: scale(0.7);
+  }
+  99% {
+    transform: scale(1);
+  }
+}
