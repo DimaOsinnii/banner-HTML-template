@@ -1,2 +1,2 @@
-var button=document.querySelector(".btn"),banner=document.querySelector(".banner"),flag=!0;function Show(){banner.style.transform="translateY(100%)",window.open("https://www.youtube.com/","Youtube"),window.focus(),flag=!flag}flag&&(button.onmouseup=Show);
+function Show(){window.open("https://www.youtube.com/","Youtube"),window.focus(),document.removeEventListener("mouseup",Show,!1)}document.addEventListener("mouseup",Show,!1);
 //# sourceMappingURL=index.js.map
